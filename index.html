@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/reset.css">
+    <link rel="stylesheet" href="./Css/inedx.css">
     <title>Todo List</title>
 </head>
 <body>
@@ -11,7 +13,7 @@
         <section id="logo">
             <img src="./assets/images.png" alt="logo">
         </section>
-        <nav>
+        <nav id="navbar">
             <ul>
                 <li><a href="./index.html">TODO LIST</a></li>
                 <li><a href="">HELP</a></li>
@@ -21,6 +23,7 @@
         <br>
     </header>
     <main>
+        <h1>TO DO LIST</h1>
         <table id="table">
             <tr>
                 <th>TASK</th>
@@ -28,22 +31,22 @@
             </tr>
             <tr>
                 <td>TASK ONE</td>
-                <td>ON</td>
+                <td><input type="checkbox" checked="checked"></td>
             </tr>
             <tr>
                 <td>TASK TWO</td>
-                <td>ON</td>
+                <td><input type="checkbox" checked="checked"></td>
             </tr>
             <tr>
                 <td>TASK THREE</td>
-                <td>OFF</td>
+                <td><input type="checkbox" checked="checked"></td>
             </tr>
         </table>
         <br>
     </main>
     <footer>
-        <p>&#169; Copyrights 2023 TODO LIST mutaz </p>
-        <p>CONTACT US</p>
+        <p id="cr">&#169; Copyrights 2023 TODO LIST mutaz CONTACT US</p>
+       
     </footer>
 </body>
 </html>
