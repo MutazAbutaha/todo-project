@@ -1,19 +1,72 @@
 'use strict'
+let theName = '';
+let theGender = '';
+let theAge = 0;
+let theSkiping = Boolean;
+let theDrive = '';
+let theMarried = '';
+let theChildren = '';
 
-let userName = prompt('What is your name?');
-let userGender = prompt('Whats is your gender?');
-let userAge = prompt('How old are you?');
+ function userName() {
+    theName = prompt('What is your name?') ;
+    return theName;
+ }  
+userName()
+   
+function userGender() {
+    theGender =  prompt('Whats is your gender?');
+   return theGender;
+}
+userGender()
+
+function userAge() {
+    theAge=  prompt('How old are you?');
+    return theAge;
+}
+userAge()
+
 let mrMs = ''
 
-userGender == 'male' ? mrMs = 'Mr '+ userName 
-: userGender == 'female' ? mrMs = 'Ms '+ userName
-: mrMs = userName ;
+theGender == 'male' ? mrMs = 'Mr '+ theName 
+: theGender == 'female' ? mrMs = 'Ms '+ theName
+: mrMs = theName ;
 
-userAge<=0 ? alert('Your age is wrong') : void(0) ;
+theAge <=0 ? alert('Your age is wrong') : null ;
 
-let skipWelcoming = confirm('Are you sure you want the Welcoming message ?');
+function skipWelcoming() {
+    theSkiping = confirm('Are you sure you want the Welcoming message ?');
+}
+skipWelcoming()
 
-skipWelcoming == true ? alert('Welcome ' + mrMs ) : void(0);
+theSkiping == true ? alert('Welcome ' + mrMs ) : null ;
+
+function userDrive() {
+    theDrive = prompt('Do you drive ?');
+    return theDrive;
+}
+userDrive()
+
+function userMarried() {
+    theMarried= prompt('Are you married ?');
+    return theMarried;
+}
+userMarried()
+
+function userChildren() {
+    theChildren  = prompt('Do you have children ?');
+    return theChildren;
+}
+userChildren()
+
+
+theDrive == 'yes' || 'no' ? theDrive = theDrive : theDrive = "invalid";
+theMarried == 'yes' || 'no' ? theMarried = theMarried : theMarried = "invalid";
+theChildren == 'yes' || 'no' ? theChildren = theChildren : theChildren = "invalid";
 
 
 
+let answersArray =[theName, theGender, theAge, theDrive, theMarried, theChildren];
+
+for(let i=0 ; i < answersArray.length ; i++){
+    console.log(answersArray[i]);
+}
