@@ -1,12 +1,19 @@
 'use strict'
 
-var userName = prompt('What is your name?');
-var gender = prompt('Whats is your gender?');
-var userAge = prompt('How old are you?');
-var mrs = ''
-gender == 'male' ? mrs = 'Mr '+ userName 
-: gender == 'female' ? mrs = 'Ms '+ userName
-: mrs = userName ;
+let userName = prompt('What is your name?');
+let userGender = prompt('Whats is your gender?');
+let userAge = prompt('How old are you?');
+let mrMs = ''
 
-userAge<=0 ? alert('Your age is wrong') : alert('Welcome ' + mrs );
+userGender == 'male' ? mrMs = 'Mr '+ userName 
+: userGender == 'female' ? mrMs = 'Ms '+ userName
+: mrMs = userName ;
+
+userAge<=0 ? alert('Your age is wrong') : void(0) ;
+
+let skipWelcoming = confirm('Are you sure you want the Welcoming message ?');
+
+skipWelcoming == true ? alert('Welcome ' + mrMs ) : void(0);
+
+
 
