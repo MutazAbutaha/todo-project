@@ -90,7 +90,7 @@ function invalid() {
 }
 
 function pushArray() {
-    answersArray.push(theName, theGender, theAge, theDrive, theMarried, theChildren);
+    answersArray.push(theDrive, theMarried, theChildren);
 }
 
 function printArray() {
