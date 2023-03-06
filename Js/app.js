@@ -1,12 +1,72 @@
 'use strict'
+let theName = '';
+let theGender = '';
+let theAge = 0;
+let theSkiping = Boolean;
+let theDrive = '';
+let theMarried = '';
+let theChildren = '';
 
-var userName = prompt('What is your name?');
-var gender = prompt('Whats is your gender?');
-var userAge = prompt('How old are you?');
-var mrs = ''
-gender == 'male' ? mrs = 'Mr '+ userName 
-: gender == 'female' ? mrs = 'Ms '+ userName
-: mrs = userName ;
+ function userName() {
+    theName = prompt('What is your name?') ;
+    return theName;
+ }  
+userName()
+   
+function userGender() {
+    theGender =  prompt('Whats is your gender?');
+   return theGender;
+}
+userGender()
 
-userAge<=0 ? alert('Your age is wrong') : alert('Welcome ' + mrs );
+function userAge() {
+    theAge=  prompt('How old are you?');
+    return theAge;
+}
+userAge()
 
+let mrMs = ''
+
+theGender == 'male' ? mrMs = 'Mr '+ theName 
+: theGender == 'female' ? mrMs = 'Ms '+ theName
+: mrMs = theName ;
+
+theAge <=0 ? alert('Your age is wrong') : null ;
+
+function skipWelcoming() {
+    theSkiping = confirm('Are you sure you want the Welcoming message ?');
+}
+skipWelcoming()
+
+theSkiping == true ? alert('Welcome ' + mrMs ) : null ;
+
+function userDrive() {
+    theDrive = prompt('Do you drive ?');
+    return theDrive;
+}
+userDrive()
+
+function userMarried() {
+    theMarried= prompt('Are you married ?');
+    return theMarried;
+}
+userMarried()
+
+function userChildren() {
+    theChildren  = prompt('Do you have children ?');
+    return theChildren;
+}
+userChildren()
+
+
+theDrive == 'yes' || 'no' ? theDrive = theDrive : theDrive = "invalid";
+theMarried == 'yes' || 'no' ? theMarried = theMarried : theMarried = "invalid";
+theChildren == 'yes' || 'no' ? theChildren = theChildren : theChildren = "invalid";
+
+
+
+let answersArray =[theName, theGender, theAge, theDrive, theMarried, theChildren];
+
+for(let i=0 ; i < answersArray.length ; i++){
+    console.log(answersArray[i]);
+}
